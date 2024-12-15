@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página Web Interactiva</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #333;
+        }
+
+        header a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Estilos de los párrafos interactivos */
+        #parrafo-azul, #parrafo-gris {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #parrafo-azul {
+            background-color: #a3d8f4;
+            color: #004e6e;
+        }
+
+        #parrafo-gris {
+            background-color: #d1d1d1;
+            color: #333;
+        }
+
+        /* Estilos de los botones */
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #respuesta, #respuestaColor, #respuestaEdad {
+            font-weight: bold;
+            color: #2f4f4f;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .interactive-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Página Web Interactiva</h1>
+        <h3><a href="#">Ir a la Página Principal</a></h3>
+        <h3><a href="#">Ir a la Segunda Página (HTML y CSS)</a></h3>
+        <h3><a href="#">Ir a la Tercera Página (HTML, CSS y JavaScript)</a></h3>
+    </header>
+
+    <main>
+        <div class="interactive-container">
+            <h3>¿Cómo te llamas?</h3>
+            <p id="parrafo-gris">Haz clic en el botón para escribir tu nombre.</p>
+            <button onclick="preguntarNombre()">Pregúntame mi nombre</button>
+            <p id="respuesta"></p>
+        </div>
+
+        <div class="interactive-container">
+            <h3>¿Cuál es tu color favorito?</h3>
+            <p id="parrafo-azul">Haz clic en el botón para compartir tu color favorito.</p>
+            <button onclick="preguntarColor()">Pregúntame mi color</button>
+            <p id="respuestaColor"></p>
+        </div>
+
+        <div class="interactive-container">
+            <h3>¿Cuántos años tienes?</h3>
+            <p id="parrafo-gris">Haz clic en el botón para compartir tu edad.</p>
+            <button onclick="preguntarEdad()">Pregúntame mi edad</button>
+            <p id="respuestaEdad"></p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web Interactiva</p>
+    </footer>
+
+    <script>
+        // Función para preguntar el nombre
+        function preguntarNombre() {
+            var nombre = prompt("Escribe tu nombre:");
+            document.getElementById("respuesta").innerHTML = "Hola, " + nombre + "!";
+        }
+
+        // Función para preguntar el color favorito
+        function preguntarColor() {
+            var color = prompt("Escribe tu color favorito:");
+            if (color.toLowerCase() === "rojo") {
+                document.getElementById("respuestaColor").innerHTML = "¡Qué bien! El rojo es un color apasionante.";
+            } else if (color.toLowerCase() === "azul") {
+                document.getElementById("respuestaColor").innerHTML = "El azul es un color relajante. ¡Me gusta!";
+            } else {
+                document.getElementById("respuestaColor").innerHTML = "¡Interesante! Ese es un color único.";
+            }
+        }
+
+        // Función para preguntar la edad
+        function preguntarEdad() {
+            var edad = prompt("¿Cuántos años tienes?");
+            edad = Number(edad);
+            if (edad >= 18) {
+                document.getElementById("respuestaEdad").innerHTML = "Eres mayor de edad, puedes hacer muchas cosas ahora.";
+            } else {
+                document.getElementById("respuestaEdad").innerHTML = "Aún eres joven, ¡pero tienes toda una vida por delante!";
+            }
+        }
+    </script>
+
+</body>
+</html>
