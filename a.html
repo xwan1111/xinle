@@ -1,1 +1,47 @@
+<html>
+  <head>
+    <title>Mi cuarta página</title>
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+<body>
+<script>
+  //switch  
+var dia = prompt ("escribe un numero 0 al 6: ");
+  var diaNombre = "ENERO"; 
+  dia = Number(dia);
+  switch (dia){
+    case 0:
+      diaNombre = "Lunes"
+      break
+    case 1:
+      diaNombre = "Martes"
+      break
+   case 2:
+      diaNombre = "Miercoles"
+      break
+   case 3:
+      diaNombre = "Jueves"
+      break
+   case 4:
+      diaNombre = "Viernes"
+      break
+  case 5:
+      diaNombre = "Sabado"
+      break
+  case 6:
+      diaNombre = "Domingo"
+      break
+    default:
+      diaNombre = "Numero de dia incorrecto"
 
+
+  
+      document.write (diaNombre);
+
+
+  
+</script>
+ 
+</body>
+  
+</html>
