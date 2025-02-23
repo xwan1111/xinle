@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title> PÁGINA WEB PARA CALCULAR SI UN NUMERO ES PRIMO</title>
+  </head>
+  <body>
+    <script src="comprobarSiEsPrimo.js"> </script>
+    <script src="pedirNumero.js"> </script>
+    <script>
+      var numero;
+      numero = pedirNumeroEnRango (2,555);
+      document.write ("<h1> Mi página web para calcular si " +numero+ " es un numero primo </h1>");
+      var esPrimo;
+      esPrimo = comprobarEsPrimo (numero);
+      if ( esPrimo == true )
+        {
+          document.write ( numero + " Es un numero primo.");
+        }
+      else 
+        {
+          document.write ( numero + " NO ES un número primo.");
+        }
+
+      
+    </script>
+  </body> 
+</html>
