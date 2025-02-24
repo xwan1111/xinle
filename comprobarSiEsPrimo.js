@@ -5,12 +5,13 @@ function comprobarEsPrimo (numero)
 
 for (i=numero-1; i>=2; i=i-1 )
   {
-if (numero % i == 0)
-{
-  esPrimo = false;
+        if (numero % i == 0)
+            {
+            esPrimo = false;
+            return esPrimo;
+            }
   }
-  }
-// si no hemos encontrado ningun divisor entonces el numero es primo
+    // si no hemos encontrado ningun divisor entonces el numero es primo
     esPrimo = true;
     return esPrimo;
   }
