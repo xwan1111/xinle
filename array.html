@@ -10,10 +10,10 @@
       var favoritos;
       var numero;
 
-        favoritos = pedirNumero (2,5);
+        favoritos = pedirNumero ("Dime: cuantos numero favoritos tienes entre ",2,5);
           for(i=1; i <= favoritos; i = i+1 )
              {
-                numero = pedirNumero (10,100);
+                numero = pedirNumeroMejorado ("Escribe ahora tus numeros favoritos entre", 10,100);
                 numeros.push (numero);
              }
           document.write ("los numeros favoritos introducidos han sido: ", numeros);
