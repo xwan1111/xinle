@@ -3,7 +3,7 @@
             color: rgb(100, 35, 230);
         }  
         #parrafo-azul {
-            background-color: blue;
+            background-color: red;
         }
         
         #parrafo-gris {
@@ -14,7 +14,7 @@
             font-size: 30px;
         }
         body {
-                background-color: red;
+                background-color: lightblue;
         }
 Hasta aquí el CSS usado en la web dos, de aqui en adelante a la web tres
 
