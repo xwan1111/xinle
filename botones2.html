@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botón Púlsame v2</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+    
+<body>
+    <div id="contenedor">
+        <button id="botonInofensivo">Botón inofensivo</button>
+        <button id="botonPulsame">Púlsame!!!!</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+        // Esperar a que el documento HTML esté completamente cargado y listo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Esto asegura que el código se ejecute sólo cuando todos los elementos del DOM estén disponibles
+            
+            // Asignar un event listener al botón con id "botonPulsame"
+            // Cuando se haga clic en este botón, se ejecutará la función mostrarAlerta
+            document.getElementById('botonPulsame').addEventListener('click', mostrarAlerta);
+            
+            // Asignar un event listener al botón con id "botonInofensivo"
+            // Cuando se haga clic, se ejecutará una función anónima
+            document.getElementById('botonInofensivo').addEventListener('click', function() {
+                // Obtener el elemento con id "mensaje" y cambiar su contenido de texto
+                document.getElementById('mensaje').textContent = 'Botón inofensivo clickeado';
+            });
+        });
+        
+        // Definición de la función mostrarAlerta
+        function mostrarAlerta() {
+            // Mostrar un cuadro de alerta con el mensaje especificado
+            alert('¡Has pulsado el botón!!!');
+        }
+    </script>
+</body>
+</html>
