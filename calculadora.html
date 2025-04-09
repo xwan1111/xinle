@@ -1,0 +1,83 @@
+<!DOCTYPE html> <!-- Esto define que es un documento HTML5 -->
+<html>
+<head>
+    <title>Calculadora Simple</title> <!-- Información para el navegador -->
+    <style>
+        /* Estilos para hacer la calculadora más presentable */
+        body {
+            font-family: Arial, sans-serif;  /* Tipo de letra */
+            max-width: 300px;                /* Ancho máximo */
+            margin: 0 auto;                  /* Centrar en pantalla */
+            padding: 20px;                   /* Espacio interior */
+            text-align: center;              /* Centrar contenido */
+            background-color: lightblue;      /* Color azul claro */
+        }
+        input {
+            padding: 10px;                    /* Espacio dentro del cuadro */
+            margin-bottom: 10px;             /* Espacio debajo */
+            width: 200px;                    /* Ancho fijo */
+        }
+        button {
+            padding: 8px 15px;              /* Espacio dentro del botón */
+            margin: 5px;                     /* Espacio alrededor */
+            cursor: pointer;                /* Cambia el cursor al pasar */
+            background-color: #4CAF50;       /* Color verde */
+            color: white;                   /* Texto blanco */
+            border: none;                    /* Sin borde */
+            border-radius: 4px;              /* Esquinas redondeadas */
+        }
+        #resultado {
+            margin-top: 20px;                /* Espacio arriba */
+            padding: 10px;                   /* Espacio interior */
+            border: 1px solid #ddd;         /* Borde gris claro */
+            min-height: 20px;               /* Altura mínima */
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculadora Simple</h2> <!-- Título de la calculadora -->   
+    <input type="number" id="entrada1" placeholder="Primer número" value="13"><br> <!-- Campo para el primer número -->    
+    <input type="number" id="entrada2" placeholder="Segundo número" value ="666"><br>  <!-- Campo para el segundo número -->
+    
+    <!-- Botones para realizar operaciones -->
+    <button id="buttonSumar">Sumar</button>
+    <button id="buttonMultiplicar">Multiplicar</button>
+      
+    <div id="resultado">ÁREA DONDE SE MOSTRARÁ EL RESULTADO</div> 
+    
+    <!-- Código JavaScript que hace funcionar la calculadora -->
+    <script>
+        var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
+        
+        // Esperamos a que la página termine de cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // Obtenemos los elementos de la página:
+            numero1 = document.getElementById('entrada1'); // Obtenemos el primer número del formulario
+            numero2 = document.getElementById('entrada2'); // Obtenemos el segundo número del formulario
+            resultado = document.getElementById('resultado'); // Donde mostraremos el resultado
+            botonSumar = document.getElementById('buttonSumar');
+            botonMultiplicar = document.getElementById('buttonMultiplicar');
+            
+            // Configuramos qué pasa cuando se hace clic en el botón Sumar
+            botonSumar.addEventListener('click', function() {
+                num1 = Number(numero1.value);
+                num2 = Number(numero2.value);
+                
+                // Mostramos el texto con la operación y el resultado
+               resultado.textContent = (num1 + " sumado a  " + num2 +" es igual a "+ (num1+num2));
+            });
+
+            /// Configuramos qué pasa cuando se hace clic en el botón Multiplicar
+            botonMultiplicar.addEventListener('click', function() {
+                num1 = Number(numero1.value);
+                num2 = Number(numero2.value);
+
+                // Mostramos el texto con la operación y el resultado
+                resultado.textContent = ( num1 + " multiplicado por "+ num2 + " es igual a "+ (num1*num2));
+            });
+         
+        });
+    </script>
+</body>
+</html>
