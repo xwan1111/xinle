@@ -80,34 +80,7 @@
         // Declaramos las variables que usaremos globalmente
         var numero, mensajeDiv;
         var esPrimo;
-
-document.addEventListener('entradaNumber', function(event) { if (event.key === 'Enter')
-{ 
-
-
-            // Obtenemos el valor del input (lo que el usuario ha escrito)
-            numero = document.getElementById('entradaNumber').value;
-            numero = Number(numero);
-            // Referencia al elemento donde mostraremos el mensaje
-            mensajeDiv = document.getElementById('mensaje');
-           esPrimo = comprobarEsPrimo(numero);
-
-             if (numero<2) {
-                mensajeDiv.textContent = ("INTRODUCE UN NUMERO MAYOR ");
-            } 
-                        else {
-                         
-                            if (esPrimo) {
-                                mensajeDiv.textContent = (" EL " + numero + " ES PRIMO ");
-                                        } 
-                                else {
-                                        mensajeDiv.textContent = (" EL " + numero + " NO ES PRIMO ");
-                                }
-                            
-            }
-    
-} });
-                                                                                                 
+                                                                                               
         
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonCalcular').addEventListener('click', function() {
