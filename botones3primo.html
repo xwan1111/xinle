@@ -90,14 +90,23 @@
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
            esPrimo = comprobarEsPrimo(numero);
-            // Si el usuario escribió algo, saludamos
-            if (esPrimo) {
-                mensajeDiv.textContent = (" EL " + numero + " ES PRIMO ");
+
+             if (numero<0) {
+                mensajeDiv.textContent = ("INTRODUCE UN NUMERO MAYOR ");
             } 
-            // Si el campo está vacío, le pedimos que escriba su nombre
-            else {
-                mensajeDiv.textContent = (" EL " + numero + " NO ES PRIMO ");
+                        else {
+                         
+                            if (esPrimo) {
+                                mensajeDiv.textContent = (" EL " + numero + " ES PRIMO ");
+                                        } 
+                                else {
+                                        mensajeDiv.textContent = (" EL " + numero + " NO ES PRIMO ");
+                                }
+                            
             }
+
+
+          
         });
     </script>
 </body>
