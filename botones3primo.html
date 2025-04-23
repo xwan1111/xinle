@@ -63,10 +63,10 @@
 <body>
     <!-- Contenedor principal -->
     <div class="contenedor">
-        <h1>Introduce tu número favorito</h1>
+        <h3>Introduce tu número favorito</h3>
 
         <!-- Campo de entrada para el numero favorito del usuario -->
-        <input type="number" id="entradaNumber" placeholder="introduce tu numero favorito"><br>
+        <input type="number" id="entradaNumber" placeholder="Introduce tu numero favorito"><br>
 
         <!-- Botón para calcular si es primo -->
         <button id="botonCalcular">¿Es primo?</button>
@@ -86,6 +86,7 @@
 
             // Obtenemos el valor del input (lo que el usuario ha escrito)
             numero = document.getElementById('entradaNumber').value;
+            numero = Number(numero);
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
            esPrimo = comprobarEsPrimo(numero);
