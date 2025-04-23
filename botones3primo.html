@@ -79,6 +79,7 @@
     <script>
         // Declaramos las variables que usaremos globalmente
         var numero, mensajeDiv;
+        var esPrimo;
 
         // Esperamos a que se haga clic en el botón
         document.getElementById('botonCalcular').addEventListener('click', function() {
@@ -87,9 +88,9 @@
             numero = document.getElementById('entradaNumber').value;
             // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
-
+           esPrimo = comprobarEsPrimo(numero);
             // Si el usuario escribió algo, saludamos
-            if (numero) {
+            if (esPrimo) {
                 mensajeDiv.textContent = ("¡Hola, " + numero + "! ¡Bienvenido a clase! 👋");
             } 
             // Si el campo está vacío, le pedimos que escriba su nombre
