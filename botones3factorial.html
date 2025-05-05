@@ -3,7 +3,7 @@
 <head>
     <title>COmprobar factorial</title>
     <style>
-        /* Estilos generales para el cuerpo de la página */
+
         body {
             font-family: Arial, sans-serif;   /* Tipo de letra amigable y legible */
             max-width: 300px;                 /* Limita el ancho del contenido */
@@ -13,14 +13,13 @@
             background-color: lightblue;      /* Color de fondo agradable */
         }
 
-        /* Estilo para los campos de entrada de texto */
         input {
             padding: 10px;                    /* Espacio interno en el input */
             margin-bottom: 10px;              /* Separación debajo del input */
             width: 200px;                     /* Ancho fijo del input */
         }
 
-        /* Estilo para los botones */
+
         button {
             padding: 8px 15px;                /* Espaciado interno del botón */
             margin: 5px;                      /* Separación alrededor del botón */
@@ -31,12 +30,10 @@
             border-radius: 4px;               /* Esquinas redondeadas */
         }
 
-        /* Estilo cuando el ratón pasa por encima del botón */
         button:hover {
             background-color: #45a049;        /* Color un poco más oscuro al pasar el ratón */
         }
 
-        /* Contenedor que envuelve todo el formulario */
         .contenedor {
             background-color: white;          /* Fondo blanco para destacar */
             padding: 30px 40px;               /* Espacio interno del contenedor */
@@ -45,13 +42,13 @@
             text-align: center;               /* Centrado del contenido */
         }
 
-        /* Estilo del título */
+
         h1 {
             margin-bottom: 20px;              /* Espacio debajo del título */
             color: #333;                      /* Color gris oscuro para buena lectura */
         }
 
-        /* Estilo para el mensaje de saludo */
+
         #mensaje {
             margin-top: 20px;                 /* Espacio encima del mensaje */
             font-size: 18px;                  /* Tamaño del texto del mensaje */
@@ -61,34 +58,28 @@
 </head>
 
 <body>
-    <!-- Contenedor principal -->
+
     <div class="contenedor">
         <h3>Introduce tu número favorito</h3>
 
-        <!-- Campo de entrada para el numero favorito del usuario -->
         <input type="number" id="entradaNumber" placeholder="Introduce tu numero favorito"><br>
 
-        <!-- Botón para calcular si es primo -->
+
         <button id="botonFactorial">comprobar factorial</button>
 
-        <!-- Área donde se mostrará el mensaje -->
         <div id="mensaje"></div>
         </div>
    
     <script src="factorial2.js"></script>
     <script>
-        // Declaramos las variables que usaremos globalmente
+
         var numero, mensajeDiv;
         var rFactorial;
                                                                                                
-        
-        // Esperamos a que se haga clic en el botón
         document.getElementById('botonFactorial').addEventListener('click', function() {
 
-            // Obtenemos el valor del input (lo que el usuario ha escrito)
             numero = document.getElementById('entradaNumber').value;
             numero = Number(numero);
-            // Referencia al elemento donde mostraremos el mensaje
             mensajeDiv = document.getElementById('mensaje');
            rFactorial = Factorial (numero);
 
