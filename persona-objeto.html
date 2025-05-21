@@ -18,8 +18,9 @@
           ciudad: "Almeria",
           pais: "España",
        saludar (){
-         console.log ("HOLA A TODOS")
-       }
+const output = document.getelementById('resultadpo-persona')
+         output.innerHTML = "HOLA ${this.nombre} TENGO ${this.edad}";
+        }
         };
       console.log(persona.nombre);
       console.log(persona.apellidos);
